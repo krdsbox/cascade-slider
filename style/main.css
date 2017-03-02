@@ -238,6 +238,13 @@ header {
   padding: 15% 25px;
   box-sizing: border-box;
 }
+.appInfo .boxActions {
+  margin-bottom: 10px;
+}
+.appInfo .boxActions a {
+  display: inline-block;
+  margin-right: 10px;
+}
 @media screen and (max-width: 768px) {
   .appInfo {
     width: 100%;
@@ -253,30 +260,30 @@ header {
     justify-content: center;
     line-height: 2;
   }
-}
-.appInfo label {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  transform: translateY(-120%);
-  transition: transform 0.5s;
-}
-.appInfo label:after {
-  content: '';
-  width: 50%;
-  padding-bottom: 50%;
-  position: absolute;
-  border-left: 2px solid #000;
-  border-top: 2px solid #000;
-  transform: rotate(45deg);
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  height: 0;
+  .appInfo label {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: translateY(-120%);
+    transition: transform 0.5s;
+  }
+  .appInfo label:after {
+    content: '';
+    width: 50%;
+    padding-bottom: 50%;
+    position: absolute;
+    border-left: 2px solid #000;
+    border-top: 2px solid #000;
+    transform: rotate(45deg);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 0;
+  }
 }
 /* Desktop Styles */
 @media screen and (min-width: 768px) {
@@ -285,30 +292,18 @@ header {
   }
   .appWrapper {
     background: url(../img/bg_mobile.png) no-repeat;
-    width: 360px;
-    height: 704px;
+    background-size: contain;
+    width: 320px;
+    height: 635px;
     position: absolute;
     top: 50%;
     right: 50%;
     transform: translateY(-50%);
   }
-  .appWrapper:after {
-    content: '';
-    width: 90%;
-    padding-bottom: 5%;
-    position: absolute;
-    bottom: -3%;
-    background: #000;
-    left: 0;
-    right: 0;
-    margin: auto;
-    border-radius: 50%;
-    filter: blur(15px);
-  }
   .appWrapper .appContainer {
-    width: 320px;
-    height: 508px;
-    margin: 80px auto 0;
+    width: 284px;
+    height: 475px;
+    margin: 50px auto 0;
   }
   .contentSwipper .swiper-slide {
     font-size: 0.8em;
@@ -329,5 +324,29 @@ header {
   .appInfo p {
     font-size: 1.2em;
     margin: -4px 0 20px;
+  }
+}
+@media screen and (min-height: 780px) {
+  .appWrapper {
+    width: 360px;
+    height: 704px;
+  }
+  .appWrapper:after {
+    content: '';
+    width: 90%;
+    padding-bottom: 5%;
+    position: absolute;
+    bottom: -3%;
+    background: #000;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50%;
+    filter: blur(15px);
+  }
+  .appWrapper .appContainer {
+    width: 320px;
+    height: 508px;
+    margin: 80px auto 0;
   }
 }
