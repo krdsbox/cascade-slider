@@ -61,12 +61,14 @@ $(document).ready(function () {
 
 	iSwiper.params.control = cSwiper;
 	cSwiper.params.control = iSwiper;
+	iSwiper.params.controlBy = 'container';
+	cSwiper.params.controlBy = 'container';
 
 	$(window).on('resize', function() {
-		swipeUpdate(iSwiper);
-		cSwiper.update();
+		swipeUpdate(iSwiper);		
 	})
 })  
+
 function swipeUpdate(e) {
 	var pWidth = $(e.slides[1]).find('div').width(),
 	sWidth = $(e.slides[0]).width(),
@@ -76,7 +78,7 @@ function swipeUpdate(e) {
 
 	$('i.bgElem').css('width', Math.round(sWidth));
 
-	e.update();
+	 e.update();
 
 	e.slideTo(e.activeIndex);
 }
