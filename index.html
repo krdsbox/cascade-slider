@@ -1,27 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-	<title>Box Starter</title>
-	<link rel="icon" href="./favicon.png">
-	<link rel="stylesheet" href="style/box.css">
-	<link rel="stylesheet" href="style/main.css">
+    <meta charset="UTF-8">
+    <title>Cascade slider</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1,user-scalable=no">
+    <link rel="icon" href="./favicon.png">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/swiper.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
-	<nav class="boxActions">
-		<a href="#" id="previous_box" title="Previous box">
-			<img src="img/back-icon.svg" alt="back" />
-		</a>
-		<a href="#" id="box_home" title="Box home">
-			<img src="img/krdsbox.svg" alt="KRDS Box" />
-		</a>
-		<a href="#" id="github_repo" title="Github repo">
-			<img src="img/github.svg" alt="Github" />
-		</a>
-	</nav>
-	<h1>Box Starter</h1>
-	<p>An optional &amp; minimal starter kit for krdsbox components</p>
-	<script src="js/main.js"></script>
+    <div class="appWrapper">        
+        <div class="appContainer">        
+            <header><!--Some dummy Header--></header>
+            <div class="swipeWrapper">
+                <div class="swiper-container imageSwipper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><div><figure style="background-image: url('img/cake1.jpg')"></figure></div></div>
+                        <div class="swiper-slide"><div><figure style="background-image: url('img/cake2.jpg')"></figure></div></div>
+                        <div class="swiper-slide"><div><figure style="background-image: url('img/cake3.jpg')"></figure></div></div>
+                        <div class="swiper-slide"><div><figure style="background-image: url('img/cake4.jpg')"></figure></div></div>
+                        <div class="swiper-slide"><div><figure style="background-image: url('img/cake5.jpg')"></figure></div></div>
+                        <div class="swiper-slide"><div><figure style="background-image: url('img/cake6.jpg')"></figure></div></div>
+                    </div>
+                    <i class="bgElem"></i>
+                    <a href="#" class="slideBtn btnNext"></a>
+                    <a href="#" class="slideBtn btnPrev"></a>
+                </div>
+                <div class="swiper-container contentSwipper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <h2>Chocoberry fudge</h2>
+                            <p>Donec rutrum congue leo eget malesuada. Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+                            <a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> $500</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Strawberry shine</h2>
+                            <p>Donec rutrum congue leo eget malesuada. Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p><a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> $750</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Assorted eight</h2>
+                            <p>Donec rutrum congue leo eget malesuada. Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p><a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> $365</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Big wedding</h2>
+                            <p>Donec rutrum congue leo eget malesuada. Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p><a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> $550</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Rosebed drown</h2>
+                            <p>Donec rutrum congue leo eget malesuada. Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p><a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> $670</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Milk bouquet</h2>
+                            <p>Donec rutrum congue leo eget malesuada. Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p><a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> $500</a>
+                        </div>
+                    </div>
+                    <i class="bgElem"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" id="mobileSlide">
+    <div class="appInfo">
+        <label for="mobileSlide"></label>
+        <nav class="boxActions">
+            <a id="previous_box" title="Previous box">
+                <img src="img/back-icon.svg" alt="back">
+            </a>
+            <a id="box_home" title="Box home">
+                <img src="img/krdsbox.svg" alt="KRDS Box">
+            </a>
+            <a id="github_repo" title="Github repo">
+                <img src="img/github.svg" alt="Github">
+            </a>
+        </nav>
+        <h1>Cascade Slider</h1>
+        <p>An experimental slider with wiggly movement </p>
+    </div>
 </body>
 </html>

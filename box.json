@@ -1,10 +1,10 @@
 {
-	"name": "Box starter",
-	"description": "An optional & minimal starter kit for krdsbox components",
-	"author": "Moorthy",
-	"author-email": "moorthy.g@krds.fr",
-	"image": "relative path of 500x500 image ( empty string if no image )",
-	"gif": "relative path of 500x500 animated gif ( empty string if no image )",
-	"tags": "comma, separated, tags",
-	"repo-url": "https://github.com/krdsbox/box-starter"
+	"name": "Cascade Slider",
+	"description": "An experimental slider with wiggly movement",
+	"author": "Logesh Kumar",
+	"author-email": "logesh.kumar@krds.fr",
+	"image": "img/packshot.jpg",
+	"gif": "img/packshot.gif",
+	"tags": "slider, product slider, swiperjs, mobile slider",
+	"repo-url": "https://github.com/krdsbox/cascade-slider"
 }
