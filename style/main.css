@@ -5,7 +5,7 @@
 }
 body {
   font-family: 'Slabo 27px', serif;
-  min-height: 100vh;
+  height: 100vh;
 }
 .swipeWrapper {
   box-sizing: border-box;
@@ -243,9 +243,13 @@ header label:before {
 header label:after {
   bottom: -250%;
 }
+.appWrapper {
+  height: 100%;
+}
 .appContainer {
+  height: 100%;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
   --bg-color: #c3497b;
   background-color: var(--bg-color);
 }
@@ -254,7 +258,7 @@ header label:after {
   position: absolute;
   left: -999px;
 }
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 768px) {
   #mobileSlide:checked ~ .appInfo {
     transform: translateY(0);
   }
@@ -280,7 +284,7 @@ header label:after {
   display: inline-block;
   margin-right: 10px;
 }
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 768px) {
   .appInfo {
     width: 100%;
     text-align: center;
@@ -302,7 +306,7 @@ header label:after {
 /* Desktop Styles */
 @media screen and (min-width: 768px) {
   body {
-    background-color: #3d6588;
+    background-color: #c3497b;
   }
   .appWrapper {
     background: url(../img/bg_mobile.png) no-repeat;
@@ -317,6 +321,7 @@ header label:after {
   .appWrapper .appContainer {
     width: 284px;
     height: 475px;
+    overflow: hidden;
     margin: 50px auto 0;
   }
   .contentSwipper .swiper-slide {
@@ -331,8 +336,6 @@ header label:after {
     width: 50%;
     height: auto;
     box-sizing: border-box;
-  }
-  .appInfo h1 {
     color: #ffffff;
   }
   .appInfo p {
@@ -340,11 +343,7 @@ header label:after {
     margin: -4px 0 20px;
   }
 }
-@media screen and (min-height: 780px) {
-  .appWrapper {
-    width: 360px;
-    height: 704px;
-  }
+@media screen and (min-width: 768px) and (min-height: 650px) {
   .appWrapper:after {
     content: '';
     width: 90%;
@@ -357,10 +356,5 @@ header label:after {
     margin: auto;
     border-radius: 50%;
     filter: blur(15px);
-  }
-  .appWrapper .appContainer {
-    width: 320px;
-    height: 508px;
-    margin: 80px auto 0;
   }
 }

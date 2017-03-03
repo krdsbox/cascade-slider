@@ -5,7 +5,7 @@
 }
 body {
     font-family: 'Slabo 27px', serif;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .swipeWrapper {
@@ -244,9 +244,13 @@ header {
         }
     }
 }
+.appWrapper {
+    height: 100%;
+}
 .appContainer {
+    height: 100%;
     position: relative;
-    overflow: hidden;
+    overflow: auto;
     --bg-color: #c3497b;
     background-color: var(--bg-color);
 }
@@ -254,7 +258,7 @@ header {
     opacity: 0;
     position: absolute;
     left: -999px;
-    @media screen and (max-width: 736px) {
+    @media screen and (max-width: 768px) {
         &:checked ~ .appInfo {
             transform: translateY(0);
         }        
@@ -280,7 +284,7 @@ header {
             margin-right: 10px;
         }
     }
-    @media screen and (max-width: 736px) {        
+    @media screen and (max-width: 768px) {        
         width: 100%;
         text-align: center;
         background: rgb(195, 74, 124);
@@ -302,7 +306,7 @@ header {
 /* Desktop Styles */
 @media screen and (min-width:768px) {
     body {
-        background-color: #3d6588;
+        background-color: #c3497b;
     }
     .appWrapper {
         background: url(../img/bg_mobile.png) no-repeat;
@@ -316,6 +320,7 @@ header {
         .appContainer {
             width: 284px;
             height: 475px;
+            overflow: hidden;
             margin: 50px auto 0;
         }
     }    
@@ -331,36 +336,25 @@ header {
         width: 50%;
         height: auto;
         box-sizing: border-box;
-        h1 {
-            color: #ffffff;
-        }
+        color: #ffffff;
         p {
             font-size: 1.2em;
             margin: -4px 0 20px;
         }
     }
 }
-@media screen and (min-height:780px) {
-    .appWrapper {
-        width: 360px;
-        height: 704px;
-        &:after {
-            content: '';
-            width: 90%;
-            padding-bottom: 5%;
-            position: absolute;
-            bottom: -3%;
-            background: #000;
-            left: 0;
-            right: 0;
-            margin: auto;
-            border-radius: 50%;
-            filter: blur(15px);
-        }
-        .appContainer {
-            width: 320px;
-            height: 508px;
-            margin: 80px auto 0;
-        }
+@media screen and (min-width:768px) and (min-height:650px) {
+    .appWrapper:after {
+        content: '';
+        width: 90%;
+        padding-bottom: 5%;
+        position: absolute;
+        bottom: -3%;
+        background: #000;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 50%;
+        filter: blur(15px);
     }
 }
