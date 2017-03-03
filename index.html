@@ -12,9 +12,12 @@
     <script src="js/main.js"></script>
 </head>
 <body>
-    <div class="appWrapper">        
-        <div class="appContainer">        
-            <header><!--Some dummy Header--></header>
+    <input type="checkbox" id="mobileSlide">       
+    <div class="appWrapper">    
+        <div class="appContainer"> 
+            <header>                
+                <label for="mobileSlide"></label>
+            </header>
             <div class="swipeWrapper">
                 <div class="swiper-container imageSwipper">
                     <div class="swiper-wrapper">
@@ -62,9 +65,8 @@
             </div>
         </div>
     </div>
-    <input type="checkbox" id="mobileSlide">
     <div class="appInfo">
-        <label for="mobileSlide"></label>
+        <label for="mobileSlide">&times;</label>
         <nav class="boxActions">
             <a id="previous_box" title="Previous box">
                 <img src="img/back-icon.svg" alt="back">

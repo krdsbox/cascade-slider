@@ -135,6 +135,12 @@ body {
 .contentSwipper p {
   line-height: 1.5;
 }
+@media screen and (min-width: 640px) and (max-width: 760px) {
+  .contentSwipper p {
+    width: 60%;
+    margin: auto;
+  }
+}
 .contentSwipper a {
   margin: 20px;
   display: inline-block;
@@ -212,6 +218,31 @@ header {
   width: 100%;
   top: 0;
 }
+header label {
+  width: 7%;
+  height: 0;
+  padding-bottom: 0.7%;
+  background: #fff;
+  position: absolute;
+  left: 2.1%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+header label:after,
+header label:before {
+  content: '';
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  background: inherit;
+}
+header label:before {
+  top: -250%;
+}
+header label:after {
+  bottom: -250%;
+}
 .appContainer {
   position: relative;
   overflow: hidden;
@@ -223,20 +254,24 @@ header {
   position: absolute;
   left: -999px;
 }
-#mobileSlide:checked + .appInfo {
-  transform: translateY(0);
-}
-#mobileSlide:checked + .appInfo label {
-  transform: translateY(0) rotate(180deg);
-}
-#mobileSlide:checked + .appInfo label:after {
-  border-color: #fff;
+@media screen and (max-width: 736px) {
+  #mobileSlide:checked ~ .appInfo {
+    transform: translateY(0);
+  }
 }
 .appInfo {
   position: fixed;
   top: 0;
   padding: 15% 25px;
   box-sizing: border-box;
+}
+.appInfo label {
+  position: absolute;
+  font-size: 70px;
+  line-height: 0.5;
+  left: 4%;
+  top: 2%;
+  display: none;
 }
 .appInfo .boxActions {
   margin-bottom: 10px;
@@ -245,7 +280,7 @@ header {
   display: inline-block;
   margin-right: 10px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 736px) {
   .appInfo {
     width: 100%;
     text-align: center;
@@ -253,7 +288,7 @@ header {
     z-index: 5;
     color: #fff;
     height: 100%;
-    transform: translateY(100%);
+    transform: translateY(-100%);
     transition: transform 0.5s;
     display: flex;
     flex-direction: column;
@@ -261,28 +296,7 @@ header {
     line-height: 2;
   }
   .appInfo label {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    transform: translateY(-120%);
-    transition: transform 0.5s;
-  }
-  .appInfo label:after {
-    content: '';
-    width: 50%;
-    padding-bottom: 50%;
-    position: absolute;
-    border-left: 2px solid #000;
-    border-top: 2px solid #000;
-    transform: rotate(45deg);
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    height: 0;
+    display: block;
   }
 }
 /* Desktop Styles */
